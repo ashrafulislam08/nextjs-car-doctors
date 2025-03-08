@@ -9,16 +9,27 @@ const ServiceDetails = async ({ params }) => {
   console.log(id);
   return (
     <div>
-      <section>
-        <figure className="flex justify-center w-full">
+      {/* Banner start */}
+      <section className="flex justify-center">
+        <figure className=" relative ">
           <Image
             src={`/assets/images/checkout/checkout.png`}
             width={1137}
             height={300}
             alt="Banner"
           />
+          <div className="absolute w-full h-full overlay-bg top-0  rounded-2xl">
+            <div className="w-full h-full flex items-center ps-16">
+              <div>
+                <h1 className="font-bold text-2xl text-white">
+                  Service Details
+                </h1>
+              </div>
+            </div>
+          </div>
         </figure>
       </section>
+      {/* Banner end */}
     </div>
   );
 };
