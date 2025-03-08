@@ -1,6 +1,7 @@
 import dbConnect from "@/lib/dbConnect";
 import Image from "next/image";
-
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa";
 const ServicesSection = async () => {
   const data = await dbConnect("services").find({}).toArray();
 
@@ -21,7 +22,11 @@ const ServicesSection = async () => {
                 <p className="text-[#FF3811] text-lg font-semibold">
                   Price: {item.price}
                 </p>
-                <div>➡</div>
+                <div>
+                  <Link href={`/services/${item._id}`}>
+                    <FaArrowRight />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
