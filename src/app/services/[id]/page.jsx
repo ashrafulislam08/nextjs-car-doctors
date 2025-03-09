@@ -30,6 +30,16 @@ const ServiceDetails = async ({ params }) => {
         </figure>
       </section>
       {/* Banner end */}
+      <section>
+        <Image
+          //   className="mx-auto"
+          src={service.img}
+          alt={service.title}
+          width={400}
+          height={200}
+        />
+        <h1 className="font-bold text-3xl">{service.title}</h1>
+      </section>
     </div>
   );
 };
