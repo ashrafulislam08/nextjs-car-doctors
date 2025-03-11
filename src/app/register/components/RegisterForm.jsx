@@ -1,8 +1,20 @@
+"use client";
+import { registerUser } from "@/app/actions/auth/registerUser";
 import Link from "next/link";
 
 const RegisterForm = () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const result = await registerUser({ name, email, password });
+    console.log({ name, email, password });
+    console.log(result);
+  };
   return (
-    <form className="w-full max-w-lg space-y-8">
+    <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-8">
       <label className="form-control w-full">
         <div className="label w-full">
           <span className="label-text  font-bold">Name</span>
