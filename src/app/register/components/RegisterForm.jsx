@@ -9,9 +9,7 @@ const RegisterForm = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const result = await registerUser({ name, email, password });
-    console.log({ name, email, password });
-    console.log(result);
+    await registerUser({ name, email, password });
   };
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-lg space-y-8">
