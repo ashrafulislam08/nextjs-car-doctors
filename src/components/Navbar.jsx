@@ -50,7 +50,12 @@ const Navbar = () => {
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
-          <Image src={`/assets/logo.svg`} width={75} height={50} />
+          <Image
+            src={`/assets/logo.svg`}
+            width={75}
+            height={50}
+            alt="Brand Logo"
+          />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
